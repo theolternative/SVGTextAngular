@@ -14,7 +14,7 @@ angular.module('SVGApp', []).directive('snap', function() {
 	        //console.log(elem.attr('font-size'));
 	        
 			scope.document = { size:{ width:210, height: 297}, margins: {left:20, top:25, right: 20, bottom:25}};
-			scope.pages = [ { lines:[{y1:25, y2:(25+lineHeight), indent:0, fragments:[{x:20, elem:elem}], stops:[scope.document.margins.left,  scope.document.size.width-scope.document.margins.right]}], objects:[{ type:'img', src: 'images/Mount_Batur.jpg', x1:115*1/scale, y1:150*1/scale, x2:515*1/scale, y2:414*1/scale }]}];
+			scope.pages = [ { lines:[{y1:25, y2:(25+lineHeight), indent:0, fragments:[{x:20, elem:elem}], stops:[scope.document.margins.left,  scope.document.size.width-scope.document.margins.right]}], objects:[{ type:'img', src: 'http://postmania.org/wp-content/uploads/2010/05/3662229028_b0543d4d9b.jpg', x1:115*1/scale, y1:150*1/scale, x2:515*1/scale, y2:414*1/scale }]}];
 			scope.status = {group: s.g().transform(matrix).add(elem), page:scope.pages[0], line:scope.pages[0].lines[0], fragment: scope.pages[0].lines[0].fragments[0], cursor:{page: scope.pages[0], line: scope.pages[0].lines[0], fragment: scope.pages[0].lines[0].fragments[0], pos:0, show:false}, ghostfrag: s.text(0,0,'').attr({fill:'rgba(255,255,255,0)'})};
 	        
 	        var cursor = s.line(scope.status.fragment.x, scope.status.line.y1, scope.status.fragment.x, scope.status.line.y2).attr({'strokeWidth':0.5});
