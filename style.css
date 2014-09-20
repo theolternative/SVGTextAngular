@@ -1,0 +1,12 @@
+body {
+	background-color: #efefef;
+	margin: 0 auto;
+}
+
+#container div {
+	margin: 0 auto;
+	background-color: white;
+	border: thin solid #eaeaea;
+	width: 630px;
+	height: 891px;
+}
